@@ -2,23 +2,64 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const pageTitle = "About Me";
+const identity = {
+	firstName: "Stefania",
+	lastName: "Ionescu",
+	occupation: "Student",
+	country: "Romania",
+	hobbies: ["Catarat", "Stat pe netflix", "Citit"],
+};
+
+const skills = ["C++", "C#", "Java"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+
 ---
 
-<div style="background-color: aqua;">
-	<button aria-setsize="10">
-		<a href="/">Home</a>
-	</button>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width"/>
+		<title>{pageTitle}</title>
+	</head>
 
-	<button aria-setsize="10">
-		<a href="/about/">About</a>
-	</button>
-	
-	<button aria-setsize="10">
-		<a href="/blog/">Blog</a>
-	</button>
-</div>
+	<body>
+		<div style="background-color: aqua;">
+			<button aria-setsize="10">
+				<a href="/">Home</a>
+			</button>
+		
+			<button aria-setsize="10">
+				<a href="/about/">About</a>
+			</button>
+			
+			<button aria-setsize="10">
+				<a href="/blog/">Blog</a>
+			</button>
+		</div>
+		
+		<h1>Despre mine</h1>
+		<h1>{pageTitle}</h1>
+		<h2>Sunt din brasov, fac facultate la paris</h2>
+		<p>Alte lucruri despre mine</p>
+		<ul>
+			<li>Ma numesc {identity.firstName}</li>
+			<li>Sunt {identity.occupation}</li>
+			<li>M-am nascut in {identity.country}</li>
+			{identity.hobbies.length >= 2 && 
+			<li>Astea sunt doua dintre hobby-urile mele: {identity.hobbies[0]} si {identity.hobbies[1]}	</li>}
+		</ul>
 
-<h1>Despre mine</h1>
-<h2>Sunt din brasov, fac facultate la paris</h2>
+		<p>Astea sunt cateva dintre skill-urile mele:</p>
+		<ul>
+			{skills.map((skill) => <li>{skill}</li>)}
+		</ul>
+
+		{happy && <p>Sunt fericita cu viata mea</p>}
+		{finished ? <p>Am terminat acest tutorial</p> : <p>Mai am de lucrat la tutorial</p>}
+		{goal == 3 ? <p>As vrea sa termin tutorialul in 3 zile</p> : <p>Nu trebuie neaparat sa termin in 3 zile</p>} 
+	</body>
+</html>
