@@ -1,4 +1,8 @@
 ---
+import '../styles/global.css';
+
+import '../components/Navigation.astro';
+import Navigation from '../components/Navigation.astro';
 
 const pageTitle = "Blog posts";
 
@@ -12,19 +16,7 @@ const pageTitle = "Blog posts";
 	</head>
 
 	<body>
-		<div style="background-color: aqua;">
-		<button aria-setsize="10">
-				<a href="/">Home</a>
-			</button>
-		
-			<button aria-setsize="10">
-				<a href="/about/">About</a>
-			</button>
-			
-			<button aria-setsize="10">
-				<a href="/blog/">Blog</a>
-			</button>
-		</div>
+		<Navigation/>
 		
 		<h1>{pageTitle}</h1>
 
