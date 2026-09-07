@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 import '../components/Navigation.astro';
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 
 const pageTitle = "About Me";
 const identity = {
@@ -70,5 +71,7 @@ const textCase = "uppercase";
 		{happy && <p>Sunt fericita cu viata mea</p>}
 		{finished ? <p>Am terminat acest tutorial</p> : <p>Mai am de lucrat la tutorial</p>}
 		{goal == 3 ? <p>As vrea sa termin tutorialul in 3 zile</p> : <p>Nu trebuie neaparat sa termin in 3 zile</p>} 
+	
 	</body>
+	<Footer/>
 </html>
