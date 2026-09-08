@@ -40,22 +40,34 @@ h1 {
     background-color: #111111;
 }
 
-.navigation ul li a:active {
+.navigation ul li a.active {
     background-color: #04AA6D;
 }
 
 .footer ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0 1rem;
     background-color: #333333;
     display: flex;
-    height: 35px;
-    position: fixed;
-    bottom: 0%;
-    left: 0%;
-    width: 100%;
+    align-items: center;
+    gap: 1rem;
 }
 
 .footer ul p {
-    
+    margin: 0;
     color: #f1f5f9;
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.footer img {
+    display: block;
+    width: 24px;
+    height: 24px;
 }

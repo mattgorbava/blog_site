@@ -2,21 +2,20 @@
 const platform = "github";
 const username = "mattgorbava";
 
-import '../styles/global.css'
+import InstagramLogo from '../assets/Instagram-Logo.wine.svg';
+import LinkedInLogo from '../assets/LinkedIn-Icon-Logo.wine.svg';
+import '../styles/global.css';
+import SocialMedia from './SocialMedia.astro';
 ---
 
 <footer class="footer">
   <ul>
     <li><p>Learn more about my work! Find me on Instagram and LinkedIn!</p></li>
     <li>
-      <a href="https://www.instagram.com/stefi.ioneasca/">
-        <img src="https://www.logo.wine/logo/Instagram" sizes="10px 10px">
-      </a>
+      <SocialMedia platform = "instagram" username = "stefi.ioneasca" icon = {InstagramLogo.src}/>
     </li>
     <li>
-      <a href="https://www.linkedin.com/in/stefania-ioneasca/">
-        <img src="https://www.logo.wine/logo/LinkedIn" sizes="10px 10px">
-      </a>
+      <SocialMedia platform = "linkedin" username = "in/stefania-ioneasca" icon = {LinkedInLogo.src}/>
     </li>
   </ul>
 </footer>
