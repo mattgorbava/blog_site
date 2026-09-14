@@ -1,10 +1,5 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
-import '../components/Navigation.astro';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About Me";
 const identity = {
@@ -33,7 +28,7 @@ const textCase = "uppercase";
 		<meta name="viewport" content="width=device-width"/>
 		<title>{pageTitle}</title>
 
-		<style define:vars={{skillColor, fontWeight, textCase}}>
+		<style define:vars={{skillColor, fontWeight, textCase}} is:global>
 			
 			h1 {
 				color: purple;
@@ -48,15 +43,9 @@ const textCase = "uppercase";
 	</head>
 
 	<body>
-		<header>
-			<nav>
-				<Navigation/>
-			</nav>
-		</header>
 		
+		<BaseLayout pageTitle={pageTitle}/>
 		
-		<h1>Despre mine</h1>
-		<h1>{pageTitle}</h1>
 		<h2>Sunt din brasov, fac facultate la paris</h2>
 		<p>Alte lucruri despre mine</p>
 		<ul>
@@ -83,6 +72,5 @@ const textCase = "uppercase";
 			Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eu lorem et ligula varius tempor. Praesent mollis laoreet blandit. Etiam at libero id leo faucibus condimentum id sed erat. Praesent dui ante, efficitur eu pharetra ut, rutrum et ipsum. Praesent ac tempor purus. Morbi pharetra mattis mauris ac tempor. Suspendisse id volutpat velit. Cras quam dui, facilisis ut gravida a, rutrum vel magna. 
 		</p>
 	
-		<Footer/>
 	</body>
 </html>

@@ -1,11 +1,11 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Unde am studiat inainte
+subtitle: Licenta am facut-o la Universitatea Transilvania din Brasov
 author: Matei Ionescu
 pubDate: 06.09.2026
 description: Unde am facut licenta
 ---
-
-# Licenta am facut-o la Universitatea Transilvania din Brasov
 
 Fiind brasovean, asta era cea mai simpla optiune
 

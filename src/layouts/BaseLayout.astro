@@ -1,0 +1,38 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+
+import '../styles/global.css';
+
+import '../components/Navigation.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Menu from '../components/Menu.astro';
+
+const { pageTitle } = Astro.props;
+
+---
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width"/>
+		<title>{pageTitle}</title>
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<Menu/>
+				<Navigation/>
+			</nav>
+		</header>
+		
+		<h1>{pageTitle}</h1>
+
+        <slot/>
+
+		<Footer/>
+
+		
+	</body>
+</html>
